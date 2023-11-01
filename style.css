@@ -1,0 +1,672 @@
+
+::before,
+::after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root{
+    --background-color: white;
+
+    --primary-text: rgb(27, 240, 27);
+    --secondary-text: rgb(34, 31, 31);
+    --light-color: rgb(44, 44, 219);
+    --dark-color: antiquewhite;
+    --text_white: rgb(255, 255, 255);
+    --text-grey: rgb(172, 169, 169);
+    --anchor-color: rgb(107, 152, 235);
+    
+    --primary-font: 'Times New Roman', Times, serif;
+    --secondary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body,
+html{
+    color: var(--primary-text);
+    font-size: 10px;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.5%;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+h1{
+    color: black;
+    font-size: 15rem;
+    font-weight:bold;
+    line-height:5rem ;
+
+   
+}
+h2{
+    color:black;
+    font-size: 4.7rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+h3{
+    color:rgb(165, 103, 10);
+    font-size: 3.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+h4{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primary-text);
+
+}
+h5{
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+    color: black
+
+}
+p{
+    
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-top: 1rem;
+   font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  color: black;
+   
+    
+}
+
+embed,iframe,
+object{
+    max-width: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+a:active,
+a:first,
+a:focus,
+a:hover,
+button{
+    text-decoration: none;
+    outline: 0;
+
+}
+
+li a{
+    color: var(--text_white);
+}
+a:hover,
+button-hover{
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--text_white);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary-text);
+}
+
+.main-btn{
+    position: relative;
+    color: var(--background-color);
+    background: linear-gradient(to right, #0f7404, #5cb917);
+    z-index: 1;
+    overflow: hidden;
+    border: 0.2rem solid var(--background-color);
+    border-radius: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem 3.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.main-btn:hover{
+    background: var(--background-color);
+    color: var(--anchor-color);
+    border: o.2rem solid var(--anchor-color);
+}  
+
+section{
+    padding: 5rem 0;
+}
+
+.section-title{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.section-subtitle{
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    color: var(--primary-text);
+    font-family: var(--secondary-text);
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.about .banner_section,
+.product .banner_section,
+.gallery .banner_section,
+.contact .banner_section{
+
+    background: url('top-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    min-height: auto;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    left: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+.header .navbar{
+    background-image: url('header-bg.png'); /* Replace 'your-image-path.jpg' with your actual image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* This makes the background image fixed */
+  }
+
+  
+  /* Ensure that the navbar remains on top of the background image */
+  .navbar {
+    background-color: transparent !important; /* Set the navbar background to transparent */
+  }
+  
+  /* Style the navbar links and text color */
+  .navbar-nav .nav-link {
+    color: #ffffff; /* Set your desired text color */
+  }
+  
+  /* Style the active link if needed */
+  .navbar-nav .nav-link.active {
+    font-weight: bold; /* Example: Make the active link bold */
+  }
+  
+
+  
+
+.navbar .navbar-brand{
+    width: 7.5rem;
+    margin-top: 0.1rem;
+}
+
+.header .collapse .nav-link{
+    color: var(--text_white);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0 0.2rem;
+    font-family: var(--primary-font);
+}
+
+.header  .collapse .nav-link:hover,
+.header  .collapse .nav-link.active
+{
+    color: #5cb917;
+}
+
+.header .navbar-toggler{
+    color: var(--text_white);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.header.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.header .header_right span{
+    color: #5cb917;
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+.header-scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 999;
+    transition: 0.3s all ease-in-out;
+}
+
+
+.banner_section{
+   background: url("Banner-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 90vh;
+}
+.banner_section .carousel-item{
+    padding: 3rem 0;
+    height: 90vh;
+}
+.banner_section .carousel-caption{
+    top: 40%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    text-align: left;
+    width: 100%;
+}
+.banner_section .carousel-caption h3{
+    padding: 0.4rem 1.5rem;
+    background-color: black;
+    display: inline;
+}
+.banner_section .carousel-caption p{
+    max-width: 40rem;
+    margin-bottom: 2rem;
+    font: bold;
+    
+}
+.banner_section .carousel-caption h1{
+    font-size: 5rem;
+}
+
+.feature-section .feature-box {
+    background-color: transparent;
+    border: 0.15rem solid #f7efef;
+    padding: 8rem  0;
+    transition: all 0.3s;
+}
+.feature-icon img {
+    width: 100px; /* Set your desired width */
+    height: 50px; /* Automatically adjust the height to maintain aspect ratio */
+}
+  
+.feature-section .feature-icon-border{
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.2rem solid rgb(235, 226, 235);
+    padding: 1.3rem;
+    display: inline-block;
+}
+
+.feature-section .feature-box .feature-icon{
+    height: 6.5rem;
+    width: 6.5rem;
+    background-color: #f0e8e8;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.feature-text h3 {
+    font-weight: bold; /* Make the text bold */
+    color: black; /* Set the text color to black */
+}
+
+.feature-section .feature-box:hover{
+    background-color: rgb(30, 32, 28);
+    border: black;
+}
+.feature-section .feature-box:hover h3{
+    color: white;
+}
+.feature-section .feature-box:hover .feature-icon-border{
+    border-color: #0f7404;
+}
+
+.landing_about_section{
+    background: url("about-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 9rem 0rem;
+}
+.landing_about_section p{
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.landing_product_section .product-card{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: transparent;
+    border: 0.25rem solid rgb(245, 242, 245);
+    padding: 2rem 1rem;
+    transition: all 0.3s;
+}
+.landing_product_section .product-card .product-img{
+    margin-bottom: 7rem;
+    text-align: center;
+}
+.landing_product_section .product-card h3{
+    color: black;
+}
+.landing_product_section .product-card span{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #5cb917;
+    margin-right: 0.5rem;
+    text-decoration: line-through;
+    transition: all 0.3s;
+}
+.landing_product_section .product-card .product-details{
+    position: absolute;
+    bottom:-33rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: black;
+    transition: all 0.5s ease;
+}
+.landing_product_section .product-card:hover .product-details{
+    bottom: 1px;
+}
+.revies-section .section-title {
+    font-weight: bold; /* Make the text bold */
+    color: #058805;   /* Change the text color to your desired color */
+    font-size: 30px;  /* Set the font size to your desired size */
+  }
+  .revies-section p {
+    font-weight: bold;   /* Make the text bold */
+    font-family: Arial, sans-serif; /* Change the font to your desired font */
+  }
+  .landing_product_section p{
+    font-weight: bold;   /* Make the text bold */
+    font-family: Arial, sans-serif;
+  }
+  .landing_product_section h3{
+    font-weight: bold; /* Make the text bold */
+    color: #058805;   /* Change the text color to your desired color */
+    font-size: 30px; 
+  }
+
+  .revies-section{
+    background-color: rgb(203, 231, 171);
+    padding-bottom: 8rem;
+    align-content: center;
+  }
+  .revies-section .carousel-indicators{
+    bottom: -6rem;
+  }
+  .revies-section h3{
+    color: #200599;
+  }
+  .revies-section .carousel-indicators button{
+    background-color: black;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+.revies-section .card-box{
+    background: url("testimonial-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: right;
+    padding:5rem 5rem 5rem 0;
+    border-radius: 0;
+    border: 0.1rem solid transparent;
+    
+}
+
+.revies-section .profile-box{
+    padding: 1.875rem;
+    background-color: black;
+    border-radius: .5rem 0 0 .5rem;
+}
+.revies-section .profile-box img{
+    border-radius: .625rem 3.124rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-section .section-title {
+    font-weight: bold; /* Make the text bold */
+    color: #058805;   /* Change the text color to your desired color */
+    font-size: 30px;  /* Set the font size to your desired size */
+  }
+  .gallery-section p {
+    font-weight: bold;   /* Make the text bold */
+    font-family: Arial, sans-serif; /* Change the font to your desired font */
+    color: black;
+  }
+
+  .gallery-section  img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+  }
+
+  .footer-section{
+    background: url("footer_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 15rem;
+    padding-bottom: 0rem;
+  }
+  .footer-section h5{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-section p{
+    color: white;
+    font-weight: bold;
+  }
+  .footer-section a{
+    color: white;
+    font-weight: bold;
+  }
+  .footer-section ul li{
+    margin-bottom: 0.5rem;
+    list-style: none;
+  }
+  .footer-section .company_details{
+    font-size: 1.4rem;
+  }
+  footer .contact-details ul.list-unstyled address a:hover {
+    text-decoration: underline;
+}
+footer .contact-details ul.list-unstyled address a {
+    text-decoration: none;
+    color: #fff;
+}
+footer .contact-details ul.list-unstyled address {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+.footer-section .copy-write{
+    background-color: #058805;
+    height: 4rem;
+    width: auto;
+    align-items: center;
+    background-size: cover;
+    text-align: center;
+
+}
+.footer-section .copy-write a{
+    font-weight: 600;
+    color: black;
+}
+
+.about .banner_section h1{
+    
+    font-size: 4rem;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.about_section h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #0f7404;
+}
+.about_section p{
+    color: black;
+    font-weight: bold;
+}
+.about .about_details{
+    color: black;
+}
+  
+.product .banner_section h1{
+    
+    font-size: 4rem;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.product-section h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #0f7404;
+}
+.product-section p{
+    color: black;
+    font-weight: bold;
+}
+
+.product-section .product-content h2,h4{
+    color: black;
+    font-weight: bold;
+}
+.product-section .product-content h4{
+    font-size: medium;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product .product_details p{
+    margin-bottom: 1.5rem;
+}
+
+.gallery .banner_section h1{
+    font-size: 4rem;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gallery_section h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #0f7404;
+}
+.gallery_section p{
+    color: black;
+    font-weight: bold;
+}
+
+.contact .banner_section h1{
+    font-size: 4rem;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact_section h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #0f7404;
+}
+.contact_section p{
+    color: black;
+    font-weight: bold;
+}
+
+/* Style the contact form */
+.contact .contact-form {
+    background-color: #f5f5f5; /* Set your desired background color */
+    padding: 5rem;
+    border-radius: 20px; 
+    border-color: black;
+    box-shadow: 0 0 2rem 1.5rem rgb(73, 230, 94);/* Add rounded corners to the form */
+  }
+  
+  /* Style the form controls */
+  .contact .contact-form .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Add a border to the input fields */
+    border-radius: 5px; /* Add rounded corners to the input fields */
+  }
+  
+  /* Style the textarea */
+  .contact_section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  /* Hover effect for the button */
+  
+  .contact .contact-form .form-control::placeholder{
+    color: black;
+  }
+  .contact .contact-form .form-control{
+    padding: 1rem 1.5rem;
+    border: 0.1rem solid rgb(36, 236, 36);
+    border-radius: 0rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  .body h4,.gallery h4,.product h4,.contact h4,.about h4{
+    font-size: large;
+    color: #058805;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+  }
